@@ -1,0 +1,92 @@
+@import './core/reset';
+@import './core/variables';
+@import './core/buttons';
+
+body {
+    background-color: $body-bg;
+    font-family: Arial, sans-serif;
+    margin: 50px 0;
+    font-size: $standard-font;
+    color: $dark;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        margin: 100px 0;
+    }
+}
+
+%size100 {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    max-width: 1140px;
+    margin: auto;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        padding: 0;
+    }
+
+    @media screen and (min-width: $desktop-breakpoint){
+        min-height: 410px;
+    }
+
+    figure {
+        @extend %size100;
+
+        @media screen and (max-width: $mobile-breakpoint) {
+            max-height: 300px;
+        }
+    }
+    
+    img {
+        @extend %size100;
+        object-fit: cover;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: $white;
+        padding: 25px;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            padding: 50px 45px;
+
+        }
+
+        @media screen and (min-width: $desktop-breakpoint){
+            padding: 93px 110px 70px;
+        }
+        
+        .title {
+            font-size: $mobile-title-font;
+            font-weight: 700;
+            margin-bottom: 25px;
+
+            @media screen and (min-width: $mobile-breakpoint) {
+                font-size: $big-font;
+                margin-bottom: 46px;
+            }
+        }
+
+        p {
+            margin-bottom: 25px;
+            line-height: 1.57;
+
+            @media screen and (min-width: $mobile-breakpoint) {
+                margin-bottom: 40px;
+            }
+        }
+
+        .primary-btn {
+            @extend %primary-btn;
+        }
+    }
+}
+
+

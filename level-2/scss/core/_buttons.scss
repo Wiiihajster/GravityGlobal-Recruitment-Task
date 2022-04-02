@@ -1,0 +1,15 @@
+%primary-btn {
+    background-color: $btn-bg;
+    border-radius: 50px;
+    width: auto;
+    border: none;
+    align-self: flex-end;
+    padding: $btn-padding;
+    color: $white;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: $btn-bg-hover; 
+    }
+}
+ 
